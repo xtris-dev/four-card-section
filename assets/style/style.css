@@ -1,0 +1,144 @@
+/* GOOGLE FONT */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+
+/* VARIABLES CSS */
+:root {
+	/* Primary colors */
+	--red: hsl(0, 78%, 62%);
+	--cyan: hsl(180, 62%, 55%);
+	--orange: hsl(34, 97%, 64%);
+	--blue: hsl(212, 86%, 64%);
+
+	/* Neutral colors */
+	--dark-blue: hsl(234, 12%, 34%);
+	--grayish-blue: hsl(229, 6%, 66%);
+	--light-gray: hsl(0, 0%, 98%);
+}
+
+/* BASIC SETTINGS */
+*,
+::after,
+::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+html {
+	font-size: 62.5%;
+}
+body {
+	font-size: 1.5rem;
+	font-family: "Poppins", sans-serif;
+	background-color: var(--light-gray);
+}
+
+/* ============= MAIN CSS =========== */
+main {
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+header {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-bottom: 5rem;
+}
+header h1 span {
+	font-weight: 200;
+	font-size: 3.3rem;
+	text-align: center;
+}
+header h1 {
+	font-size: 3.3rem;
+	text-align: center;
+	color: var(--dark-blue);
+}
+header p {
+	color: var(--grayish-blue);
+	text-align: center;
+	max-width: 500px;
+	margin-top: 2rem;
+	font-weight: 200;
+}
+
+/* Box */
+.box-container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+    max-width: 1200px;
+}
+.box-container .box {
+	background-color: #fff;
+	max-width: 340px;
+	padding: 3rem;
+	border-radius: 0.5rem;
+	overflow: hidden;
+	box-shadow: 0 10px 20px rgb(0 0 0 / 5%), 0 6px 6px rgb(0 0 0 / 10%);
+    margin: 2rem;
+    position: relative;
+}
+.box-container .box h3 {
+	color: var(--dark-blue);
+	font-size: 2rem;
+}
+.box-container .box p {
+	color: var(--grayish-blue);
+	font-weight: 200;
+	font-size: 1.3rem;
+	margin-top: 0.8rem;
+}
+.box-container .box img {
+	margin-top: 4rem;
+	display: block;
+	margin-left: auto;
+}
+
+.box-cyan, .box-blue {
+    transform: translateY(50%);
+}
+
+.box::after {
+    content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 5px;
+	width: 100%;
+}
+.box-cyan::after {
+    background-color: var(--cyan);
+}
+.box-red::after {
+    background-color: var(--red);
+}
+.box-blue::after {
+    background-color: var(--blue);
+}.box-orange::after {
+    background-color: var(--orange);
+}
+
+/* ================ MEDIA QUERIES / RESPONSIVE MOBILE ============ */
+@media screen and (max-width: 1145px) {
+    main {
+        padding: 4rem 0;
+    }
+    header h1 span {
+        font-size: 2.4rem;
+    }
+    header h1 {
+        font-size: 2.4rem;
+    }
+    header p {
+        max-width: 90%;
+        margin-top: 2rem;
+        font-weight: 200;
+    }
+    .box-cyan, .box-blue {
+        transform: translateY(0);
+    }
+}
